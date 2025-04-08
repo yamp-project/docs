@@ -1,0 +1,24 @@
+---
+title: Entity Management
+---
+
+In YAMP, the server centrally manages all dynamic entities within the game world. This includes:
+*   Players
+*   Vehicles
+*   Pedestrians (Peds)
+*   Objects
+
+## Server Control
+Creation, deletion, and state modifications (like position, rotation, health, model, metadata) are controlled authoritatively by the server. Client scripts cannot directly create or globally modify networked entities.
+
+## Streaming
+Clients receive streamed updates only for entities within their relevance radius (often called the "stream distance"). This optimizes performance and bandwidth by ensuring clients only know about nearby entities. The server handles the logic of determining which entities are relevant to each client.
+
+## Developer API
+YAMP provides APIs (available in Lua, TypeScript) for server-side scripts to:
+*   Create and destroy entities.
+*   Get and set entity properties (position, model, health, etc.).
+*   Query the state of entities.
+*   Attach custom logic and data (metadata) to entities.
+
+Client-side scripts can interact with entities streamed to them (e.g., read their properties, perform local effects) but cannot change their authoritative state.

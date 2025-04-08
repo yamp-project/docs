@@ -1,0 +1,23 @@
+---
+title: Introduction to the C SDK
+---
+
+YAMP provides a core C Software Development Kit (SDK) for advanced users and platform contributors.
+
+## Purpose
+The C SDK exposes the fundamental, low-level APIs of the YAMP platform. Its primary purposes are:
+1.  **Creating Custom Runtimes:** Enabling developers to build support for scripting languages beyond the officially supported Lua and TypeScript (e.g., Python, Rust, Go, etc.).
+2.  **Developing Platform Extensions:** Building native modules or plugins that integrate deeply with the YAMP core, potentially offering new features or performance optimizations not achievable through scripting alone.
+
+## Audience
+This section is intended for developers comfortable with C/C++ development and low-level systems programming. It is **not** required for typical server development using the standard Lua or TypeScript runtimes.
+
+## Capabilities
+Using the C SDK, you can interact directly with:
+*   Core event loops
+*   Entity management functions
+*   Native function invocation
+*   Networking internals (to a degree)
+*   Resource management hooks
+
+Refer to the subsequent guides for details on building runtimes and extensions. ([Building Custom Runtimes](./building-custom-runtimes.md), [Platform Extension Guides](./platform-extension-guides.md)) 
