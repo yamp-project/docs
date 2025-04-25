@@ -6,6 +6,9 @@ import starlightHeadingBadges from 'starlight-heading-badges';
 
 // https://astro.build/config
 export default defineConfig({
+	redirects: {
+		'/': '/en',
+	},
 	integrations: [
 		starlight({
 			title: 'YAMP :: V',
