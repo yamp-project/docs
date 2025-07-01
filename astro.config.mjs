@@ -9,6 +9,9 @@ export default defineConfig({
 	redirects: {
 		'/': '/en',
 	},
+	devToolbar: {
+    enabled: false
+ 		},
 	integrations: [
 		starlight({
 			title: 'YAMP :: V',
