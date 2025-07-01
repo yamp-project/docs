@@ -10,8 +10,8 @@ export default defineConfig({
 		'/': '/en',
 	},
 	devToolbar: {
-    enabled: false
- 		},
+		enabled: false,
+	},	
 	integrations: [
 		starlight({
 			title: 'YAMP :: V',
