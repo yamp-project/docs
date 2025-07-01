@@ -5,14 +5,24 @@ title: Runtimes
 YAMP supports multiple scripting runtimes, allowing developers to choose the language that best suits their preferences and project needs.
 
 ## Officially Supported Runtimes
-*   **Lua:** A lightweight, embeddable scripting language known for its simplicity and speed. Often favored for rapid development and common game logic.
-*   **JavaScript (JS):** A widely-used, versatile language with a vast ecosystem. Suitable for various tasks, including UI development when paired with compatible frameworks.
 
-These runtimes provide APIs to interact with the YAMP platform's features (entities, events, natives, etc.).
+* **Lua**  
+  A lightweight, embeddable scripting language known for its simplicity and performance. Ideal for rapid development and game logic.
+
+* **JavaScript (JS)**  
+  A widely-used, versatile language with a large ecosystem. Suitable for general scripting tasks, including UI integration.
+
+* **TypeScript (TS)**  
+  A statically typed superset of JavaScript, offering improved tooling, safety, and maintainability. Recommended for larger or more complex projects.
+
+All official runtimes expose APIs to interact with YAMP platform features such as entities, events, networking, and native functions.
 
 ## Extensibility via C SDK
-Beyond the official runtimes, YAMP provides a core **C SDK**. This SDK exposes the underlying platform APIs, enabling the community to:
-*   Develop and integrate support for additional languages (e.g., Python, Rust, Go).
-*   Build custom runtimes with unique features or integrations.
 
-This fosters an extensible ecosystem where the community can contribute significantly to the platform's capabilities. (See [SDK Development](../sdk-development/introduction.md))
+Beyond the official runtimes, YAMP offers a core **C SDK** that exposes low-level platform APIs. This enables the community to:
+
+* Add support for other languages (e.g., Python, Rust, Go)
+* Build custom runtimes with specialized behavior or integrations
+
+This extensibility allows YAMP to evolve as a community-driven platform.  
+See: [SDK Development](../sdk-development/introduction.md)

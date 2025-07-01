@@ -5,19 +5,30 @@ title: Introduction to the C SDK
 YAMP provides a core C Software Development Kit (SDK) for advanced users and platform contributors.
 
 ## Purpose
-The C SDK exposes the fundamental, low-level APIs of the YAMP platform. Its primary purposes are:
-1.  **Creating Custom Runtimes:** Enabling developers to build support for scripting languages beyond the officially supported Lua and TypeScript (e.g., Python, Rust, Go, etc.).
-2.  **Developing Platform Extensions:** Building native modules or plugins that integrate deeply with the YAMP core, potentially offering new features or performance optimizations not achievable through scripting alone.
+
+The C SDK exposes low-level APIs within the YAMP platform. Its primary goals are:
+
+1. **Creating Custom Runtimes**  
+   Support additional scripting languages beyond the officially supported Lua and Javascript/TypeScript (e.g., Python, Rust, Go).
+
+2. **Developing Platform Extensions**  
+   Build native modules or plugins that integrate directly with the YAMP core, enabling features or optimizations that are not possible through scripting alone.
 
 ## Audience
-This section is intended for developers comfortable with C/C++ development and low-level systems programming. It is **not** required for typical server development using the standard Lua or TypeScript runtimes.
+
+This SDK is intended for developers experienced in C or C++ and familiar with low-level systems programming. It is **not required** for typical server development using Lua or TypeScript.
 
 ## Capabilities
-Using the C SDK, you can interact directly with:
-*   Core event loops
-*   Entity management functions
-*   Native function invocation
-*   Networking internals (to a degree)
-*   Resource management hooks
 
-Refer to the subsequent guides for details on building runtimes and extensions. ([Building Custom Runtimes](./building-custom-runtimes.md), [Platform Extension Guides](./platform-extension-guides.md)) 
+With the C SDK, you can access and interact with:
+
+* Core event loops
+* Entity management
+* Native function invocation
+* Networking internals (to a limited extent)
+* Resource lifecycle hooks
+
+Refer to the following guides for implementation details:
+
+* [Building Custom Runtimes](./building-custom-runtimes.md)
+* [Platform Extension Guides](./platform-extension-guides.md)
