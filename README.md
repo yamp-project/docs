@@ -2,18 +2,23 @@
 ## 🚀 Project Structure
 
 You'll see the following folders and files:
-
+ 
 ```
 .
 ├── public/
 ├── src/
-│   ├── assets/
-│   ├── content/
+│   ├── assets/       - Images and other media
+│   ├── content/      - The actual docs
 │   │   ├── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+│   │   │   ├── dev/  - Placeholder for generation
+│   │   │   ├── rc/   - Placeholder for generation
+│   │   │   ├── de/   - German Language; Latest
+│   │   │   │   ├── dev/  - German Language; Dev
+│   │   │   │   ├── rc/   - German Language; RC
+│   │   │   ├── en/   - English Language (default); Latest
+│   │   │   │   ├── dev/  - English Language; Dev
+│   │   │   │   ├── rc/   - English Language; RC
+│   │   ├── versions/ - Defining versions
 ```
 
 Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
@@ -22,8 +27,6 @@ Images can be added to `src/assets/` and embedded in Markdown with a relative li
 
 Static assets, like favicons, can be placed in the `public/` directory.
 ### Contributing
-
-
 
 ## 🧞 Commands
 
