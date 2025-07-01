@@ -20,7 +20,12 @@ import {Card, CardGrid, LinkButton} from '@astrojs/starlight/components';
 
 ## Quick Travel
 
-<CardGrid stagger>
+<CardGrid>
+  <Card title="Appendix" icon="seti:folder">
+        Key Information regarding YAMP
+
+        <LinkButton href="/en/appendix/">View</LinkButton>
+	</Card>
 	<Card title="Getting Started" icon="pencil">
         Featuring some basics to get to know the platform
         <LinkButton href="/en/getting-started/">View</LinkButton>
@@ -39,13 +44,13 @@ import {Card, CardGrid, LinkButton} from '@astrojs/starlight/components';
 	</Card>
 	<Card title="Platform Internals" icon="open-book">
         <p>
-            lorem
+            Learn about internal logic within YAMP! 
         </p>
         <LinkButton href="/en/platform-internals/">View</LinkButton>
 	</Card>
-    <Card title="SDK Development" icon="open-book">
+    <Card title="SDK Development" icon="approve-check">
         <p>
-            lorem
+           Everything you need to build and integrate with our platform - in one place
         </p>
         <LinkButton href="/en/sdk-development/">View</LinkButton>
     </Card>

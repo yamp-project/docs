@@ -2,8 +2,20 @@
 title: Networking Architecture
 ---
 
-YAMP employs a modern client-server networking architecture, departing significantly from the peer-to-peer model used by GTA Online and FiveM. All game state and logic are managed authoritatively by the server.
+YAMP uses a modern client-server networking architecture, diverging from the peer-to-peer model used by GTA Online and FiveM. All game state and logic are managed authoritatively by the server.
 
-Synchronization is handled through efficient state replication, ensuring that clients receive timely updates about relevant entities and events. We prioritize low-latency updates for critical actions while optimizing bandwidth for less crucial state changes.
+## Synchronization
 
-Developers interact with the networking layer through a clear API, simplifying the process of creating networked gameplay features without needing deep knowledge of the underlying protocols. 
+Entity and event synchronization is handled through efficient state replication. Clients receive timely updates only for relevant entities, based on their stream range and visibility. 
+
+The system prioritizes low-latency updates for critical actions (such as player movement or combat), while optimizing bandwidth for less time-sensitive state changes.
+
+## Developer Experience
+
+YAMP exposes a streamlined networking API, allowing developers to build multiplayer features without needing to understand low-level networking protocols. This API handles:
+
+* Entity updates and replication
+* Remote events and data transfer
+* Streaming relevance filtering
+
+The result is a fast, scalable foundation for secure and responsive gameplay systems.

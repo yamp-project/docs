@@ -2,23 +2,33 @@
 title: Event System
 ---
 
-YAMP utilizes an event system for communication and reacting to occurrences within the game. This system facilitates communication:
-*   Between different resources on the server.
-*   Between the server and clients.
-*   Between different resources on the client.
+YAMP uses a flexible event system to enable communication and reactions across different parts of the game. This system facilitates communication:
+
+* Between different resources on the server
+* Between the server and clients
+* Between different resources on the client
 
 ## Purpose
-Events help decouple game logic and create reactive systems. Instead of one script directly calling functions in another, it can trigger an event, and any interested scripts can subscribe (listen) to that event and react accordingly.
+
+Events decouple game logic and enable reactive design. Instead of one script directly calling another, it can trigger an event. Any interested script can subscribe to that event and respond independently.
 
 ## Types of Events
-*   **Built-in Events:** The platform emits events for common occurrences like player connections/disconnections, entity creation/destruction, damage events, entity enter/leave stream range, etc.
-*   **Custom Events:** Developers can define and trigger their own custom events to signal specific game logic milestones or communicate between their resources.
-*   **Client \<-> Server Events:** Events can be triggered on the server to be received by specific clients (or all clients), and clients can trigger events intended for the server (which should always be validated server-side for security).
+
+* **Built-in Events**  
+  YAMP emits events for common actions such as player connect/disconnect, entity creation and destruction, damage, and entities entering or leaving a client’s stream range.
+
+* **Custom Events**  
+  Developers can define and trigger their own events to represent gameplay milestones or facilitate communication between custom systems.
+
+* **Client–Server Events**  
+  Events can be triggered on the server and sent to specific clients or all clients. Similarly, clients can emit events to the server. These client-to-server events should always be validated on the server for security.
 
 ## Usage
-Developers use API functions to:
-*   **Subscribe (On):** Register a handler function to be called when a specific event occurs.
-*   **Trigger (Emit):** Fire an event, optionally passing data along with it.
-*   **Unsubscribe (Off):** Remove a previously registered handler.
 
-Refer to the [Event Handling Guide](../../developer-guides/event-handling.md) and the API Reference for specific event names and usage details.
+YAMP’s event API provides functions to:
+
+* **Subscribe (`On`)** — Register a handler function for a specific event
+* **Trigger (`Emit`)** — Fire an event, optionally passing data with it
+* **Unsubscribe (`Off`)** — Remove a previously registered handler
+
+Refer to the [Event Handling Guide](../../developer-guides/event-handling.md) and the API reference for detailed usage and a list of available events.
