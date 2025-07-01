@@ -1,36 +1,54 @@
 ---
-title: Willkommen bei Starlight!
+title: Willkommen bei YAMP!
 description: Get started building your docs site with Starlight.
 template: splash
 hero:
-  tagline: Herzlichen Glückwunsch zur Einrichtung eines neuen Starlight-Projekts!
+  tagline: Der kompetitive GTA V-Multiplayer-Client - skalierbar, schnell und auf Leistung ausgelegt.
   image:
-    file: ../../../assets/houston.webp
+    file: ../../../assets/LogoWithText.svg
   actions:
-    - text: Example Guide
-      link: /getting-started/
+    - text: Getting Started
+      link: /de/getting-started/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+    - text: Unserem Discord beitreten
+      link: https://discord.gg/yamp
       icon: external
       variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import {Card, CardGrid, LinkButton} from '@astrojs/starlight/components';
 
-## Nächste Schritte
+## Schnellreise
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-        Bearbeiten Sie `src/content/docs/index.mdx`, um diese Seitenänderung zu sehen.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-        Fügen Sie Markdown- oder MDX-Dateien zu `src/content/docs` hinzu, um neue Seiten zu erstellen.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit Ihre `Sidebar` und andere Konfiguration in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-        Erfahren Sie mehr in [den Starlight Docs] (https://starlight.astro.build/).
-	</Card>
+    <Card title="Getting Started" icon="pencil">
+        <p>
+            Mit einigen Grundlagen zum Kennenlernen der Plattform
+        </p>
+        <LinkButton href="/de/getting-started/">Ansehen</LinkButton>
+    </Card>
+    <Card title="Developer Guides" icon="add-document">
+        <p>
+            Für Entwickler, vielleicht sogar von einer anderen Plattform kommend, findest Du deinen Weg zu YAMP.
+        </p>
+        <LinkButton href="/de/developer-guides/">Ansehen</LinkButton>
+    </Card>
+    <Card title="GTA:V Reference Data" icon="setting">
+        <p>
+            Daten/Informationen, die Dir bei der Entwicklung helfen könnten
+        </p>
+        <LinkButton href="/de/gta-v-reference-data/">Ansehen</LinkButton>
+    </Card>
+    <Card title="Platform Internals" icon="open-book">
+        <p>
+            lorem
+        </p>
+        <LinkButton href="/de/platform-internals/">Ansehen</LinkButton>
+    </Card>
+    <Card title="SDK Development" icon="open-book">
+        <p>
+            lorem
+        </p>
+        <LinkButton href="/de/sdk-development/">Ansehen</LinkButton>
+    </Card>
 </CardGrid>

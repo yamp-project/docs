@@ -1,7 +1,7 @@
 # YAMP Docs
 ## 🚀 Project Structure
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+You'll see the following folders and files:
 
 ```
 .
@@ -21,6 +21,9 @@ Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. 
 Images can be added to `src/assets/` and embedded in Markdown with a relative link.
 
 Static assets, like favicons, can be placed in the `public/` directory.
+### Contributing
+
+
 
 ## 🧞 Commands
 

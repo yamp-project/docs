@@ -1,36 +1,52 @@
 ---
-title: Willkommen bei Starlight!
+title: Welcome to YAMP!
 description: Get started building your docs site with Starlight.
 template: splash
 hero:
-  tagline: Herzlichen Glückwunsch zur Einrichtung eines neuen Starlight-Projekts!
+  tagline: The competitive GTA V multiplayer client — scalable, fast, and built for performance.
   image:
-    file: ../../../assets/houston.webp
+    file: ../../../assets/LogoWithText.svg
   actions:
-    - text: Example Guide
-      link: /getting-started/
+    - text: Getting Started
+      link: /en/getting-started/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+    - text: Join our Discord
+      link: https://discord.gg/yamp
       icon: external
       variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import {Card, CardGrid, LinkButton} from '@astrojs/starlight/components';
 
-## Nächste Schritte
+## Quick Travel
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-        Bearbeiten Sie `src/content/docs/index.mdx`, um diese Seitenänderung zu sehen.
+	<Card title="Getting Started" icon="pencil">
+        Featuring some basics to get to know the platform
+        <LinkButton href="/en/getting-started/">View</LinkButton>
 	</Card>
-	<Card title="Add new content" icon="add-document">
-        Fügen Sie Markdown- oder MDX-Dateien zu `src/content/docs` hinzu, um neue Seiten zu erstellen.
+	<Card title="Developer Guides" icon="add-document">
+        <p>
+            Being a developer, perhaps even coming from another platform finding your way into YAMP.
+        </p>
+        <LinkButton href="/en/developer-guides/">View</LinkButton>
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit Ihre `Sidebar` und andere Konfiguration in `astro.config.mjs`.
+	<Card title="GTA:V Reference Data" icon="setting">
+		<p>
+            Data/ Information that might help you with developing
+        </p>
+        <LinkButton href="/en/gta-v-reference-data/">View</LinkButton>
 	</Card>
-	<Card title="Read the docs" icon="open-book">
-        Erfahren Sie mehr in [den Starlight Docs] (https://starlight.astro.build/).
+	<Card title="Platform Internals" icon="open-book">
+        <p>
+            lorem
+        </p>
+        <LinkButton href="/en/platform-internals/">View</LinkButton>
 	</Card>
+    <Card title="SDK Development" icon="open-book">
+        <p>
+            lorem
+        </p>
+        <LinkButton href="/en/sdk-development/">View</LinkButton>
+    </Card>
 </CardGrid>
