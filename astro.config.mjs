@@ -13,7 +13,7 @@ export default defineConfig({
 		starlight({
 			title: 'YAMP :: V',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/yamp-project',
 			},
 			// Set English as the default language for this site.
 			defaultLocale: 'en',
