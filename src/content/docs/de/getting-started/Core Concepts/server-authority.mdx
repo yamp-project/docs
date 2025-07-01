@@ -1,3 +1,25 @@
 ---
-title: Server Authority Explained
+title: Server Authority
 ---
+
+YAMP operates with server-side authority, meaning the server is the single source of truth for game state and actions. Unlike peer-to-peer systems (like GTA Online or FiveM) which rely heavily on the GTA netcode, YAMP does not.
+
+## How it Works
+Client actions are treated as requests or inputs. The server receives these inputs, validates them against the game rules and state, executes the valid actions, and then replicates the resulting state changes back to relevant clients.
+
+## Benefits
+This approach fundamentally prevents many cheats common in P2P systems, such as:
+*   Clients illegitimately taking control of entities (e.g., vehicles owned by others).
+*   Clients manipulating their own state (e.g., god mode, teleporting).
+*   Exploits inherent to the base game's netcode.
+
+:::info[Example: Vehicle Control]
+In peer-to-peer systems, a client might "request" network ownership of a vehicle. If granted (sometimes illegitimately), they can manipulate its sync data, potentially exploding it even if another player is driving. In YAMP, the server always retains authority; a client can only *request* to enter or control a vehicle, and the server verifies and executes this action.
+:::
+
+## Developer Impact
+*   **Security:** You build on a foundation resistant to many common exploits.
+*   **Logic:** You primarily write server-side logic to handle actions and state changes. Client-side code focuses on presentation, input, and requesting actions.
+*   **Latency:** While server authority guarantees fairness, actions dependent on server validation might feel slightly less immediate than in P2P systems, depending on player latency. YAMP's networking layer is designed to minimize this impact for critical actions.
+
+The trade-off for increased security and stability is a higher reliance on server performance and network quality compared to P2P, but this is essential for creating fair competitive environments.
